@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Gh pages deploy angular app
+
+## First install special package
+npm install -g angular-cli-ghpages
+
+## Second build your priject with parameter
+ng build --prod --base-href "https://(username).github.io/(repository_name)"
+Example for my project:
+ng build --prod --base-href "https://pavishnev.github.io/livechat2021-pages/#/"
+
+## Third deploy your project from the directory, where you built the prod version
+
+ ngh --dir dist/(your_dist_folder_name)
+Example for my project:
+  ngh --dir dist/frontend
